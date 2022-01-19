@@ -1,0 +1,66 @@
+
+@keyframes enter {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 100;
+  }
+}
+
+@keyframes enterBrand {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 100;
+  }
+}
+
+
+
+
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  #footerIconLink1, #footerIconLink2, #footerIconLink3 {
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-name: enter;
+  }
+    #footerIconLink1 {
+    animation-duration: 2s;
+  }
+
+  #footerIconLink2 {
+    animation-duration: 2.2s;
+  }
+  #footerIconLink3 {
+    animation-duration: 2.4s;
+  }
+
+  .navbar-brand.animate__animated.animate__fadeInRightBig{
+    --animate-duration: 1s;
+  }
+
+  .footerIconList.footerIconsTop.animate__animated.animate__fadeInLeftBig{
+    --animate-duration: 1s;
+  }
+
+  .navbar-nav.animate__animated.animate__fadeInUp {
+  --animate-delay: 0.75s;
+
+  }
+
+}
+
+
+.container.in-view .element {
+  animation-name: enter;
+}
